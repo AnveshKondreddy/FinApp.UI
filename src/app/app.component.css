@@ -1,0 +1,9 @@
+#header{
+    background-color:#ebedf0;
+    height: 100px;
+}
+
+::ng-deep #menu .ui-menubar .ui-menubar-root-list>.ui-menuitem>.ui-menuitem-link{
+    padding: 0px;
+    padding-right: 50px;    
+}
