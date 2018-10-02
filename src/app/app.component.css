@@ -7,3 +7,7 @@
     padding: 0px;
     padding-right: 50px;    
 }
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    padding-right: 50px;
+}
