@@ -10,7 +10,11 @@ import { CalendarModule } from 'primeng/calendar'
 import { FormsModule } from '@angular/forms';
 import { MenubarModule } from 'primeng/menubar';
 import { MemberComponent } from './member/member.component';
+import{TableModule} from 'primeng/table';
+import {DataTable, DataTableModule} from 'primeng/datatable';
+import{ButtonModule} from 'primeng/button';
 import { HomeComponent } from './home/home.component';
+import { HttpModule } from '@angular/http';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -27,10 +31,11 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
+    HttpModule,
     RouterModule.forRoot(routes, { useHash: true }),
     FormsModule,
     MenubarModule,
-    CalendarModule
+    CalendarModule,TableModule,DataTableModule,ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

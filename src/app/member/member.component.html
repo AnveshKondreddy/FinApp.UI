@@ -1,3 +1,18 @@
-<p>
-  member works!
-</p>
+<h3>Members List</h3>
+<p-dataTable [value]="members" sortMode="single" reorderableColumns="true" 
+scrollable="true" scrollHeight="350px" [(selection)]="selectedItems" columnResizeMode="expand"
+ exportFilename="membersList" #dataTable
+>
+  <p-header [style]="{'width': '100%'}"> 
+    <div class="ui-helper-clearfix">
+      <button type="button" pButton icon="fa fa-file" iconPos="left" label="Export All" style="float:right" (click)="dataTable.exportCSV()"></button>
+    </div>
+  </p-header>
+  <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+
+  <p-column field="FirstName" header="First Name" [sortable]="true"  [filter]="true"></p-column>
+  <p-column field="LastName" header="Last Name" [sortable]="true" [filter]="true"></p-column>
+  <p-column field="Mobile" header="Mobile" [sortable]="true"  [filter]="true"></p-column>
+  <p-column field="IsActive" header="Status" [sortable]="true"  [filter]="true"></p-column>
+
+  </p-dataTable>
